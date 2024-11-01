@@ -92,22 +92,10 @@ const justifyContentStyles = stylex.create({
 });
 
 const flexDirectionStyles = stylex.create({
-  row: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  column: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  "row-reverse": {
-    display: "flex",
-    flexDirection: "row-reverse",
-  },
-  "column-reverse": {
-    display: "flex",
-    flexDirection: "column-reverse",
-  },
+  row: { flexDirection: "row" },
+  column: { flexDirection: "column" },
+  "row-reverse": { flexDirection: "row-reverse" },
+  "column-reverse": { flexDirection: "column-reverse" },
 });
 
 const wrapStyles = stylex.create({
@@ -116,16 +104,8 @@ const wrapStyles = stylex.create({
 });
 
 const styles = stylex.create({
-  base: {
-    display: "flex",
-  },
-  rowGap: (size: number) => ({
-    rowGap: `${size}rem`,
-  }),
-  columnGap: (size: number) => ({
-    columnGap: `${size}rem`,
-  }),
-  flex: (flex: string) => ({
-    flex,
-  }),
+  base: { display: "flex" },
+  rowGap: (size: number) => ({ rowGap: `${size}rem` }),
+  columnGap: (size: number) => ({ columnGap: `${size}rem` }),
+  flex: (flex: string) => ({ flex }),
 });

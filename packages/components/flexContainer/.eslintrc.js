@@ -1,11 +1,11 @@
 module.exports = {
   extends: [
-    "prettier",
+    // "prettier",
     "eslint:recommended",
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
   ],
-  plugins: ["import", "prettier"],
+  plugins: ["import"],
   rules: {
     "import/order": [
       "error",
@@ -25,7 +25,7 @@ module.exports = {
         },
       },
     ],
-    "prettier/prettier": ["error", { endOfLine: "auto", singleQuote: true }],
+    // "prettier/prettier": ["error", { endOfLine: "auto", singleQuote: true }],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-var-requires": "off",

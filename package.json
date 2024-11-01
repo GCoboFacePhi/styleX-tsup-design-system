@@ -20,5 +20,10 @@
   "workspaces": [
     "apps/*",
     "packages/**"
-  ]
+  ],
+  "prettier": {
+    "singleQuote": false,
+    "tabWidth": 2,
+    "proseWrap": "always"
+  }
 }

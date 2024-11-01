@@ -1,6 +1,18 @@
 {
-  "extends": "../../../tsconfigBase.json",
-  "include": [
-    "./src"
-  ],
+  // "extends": "../../../tsconfigBase.json",
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    "module": "ESNext", // Preserve ES module syntax
+    "target": "ESNext",
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "declaration": true,
+    "downlevelIteration": false,
+    "jsx": "react-jsx",
+    // "declarationDir": "./dist",
+    // "target": "ES6",
+    "rootDir": "./src"
+    // "useDefineForClassFields": false
+  }
 }

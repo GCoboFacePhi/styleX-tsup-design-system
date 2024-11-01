@@ -1,24 +1,37 @@
 import stylex from "@stylexjs/stylex";
 import { FlexContainer } from "@ui/flex-container/FlexContainer";
 // This is still broken. Figuring it out.
-// import { varColors } from "@ui/theme/variables/colors.stylex";
+import { varColors } from "@ui/theme/variables/colors.stylex";
 import styles from "./page.module.css";
 
 const style = stylex.create({
-  base: {
+  // Temporary workaround for broken theming resolution.
+  base: (red, blue) => ({
+    fontFamily: "system-ui, sans-serif",
+    lineHeight: 1.3,
     fontSize: "2rem",
     color: "white",
     backgroundColor: {
-      default: "red",
-      ":hover": "blue",
+      default: red,
+      ":hover": blue,
     },
-  },
+  }),
 });
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <FlexContainer className={style.base}>
+      <FlexContainer
+        flexDirection="column"
+        rowGap={2}
+        className={style.base(varColors.error400, varColors.blue400)}
+      >
+        <p>
+          <code>varColors.error400</code> is <code>{varColors.error400}</code>
+          but it resolves to <code>`--x1h589k8`</code> in the StyleX compiler
+          when used in the `app/next-app` package.
+        </p>
+        <p>This problem should be fixed in the next release.</p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam facere
           dolor rem autem eos earum facilis hic nihil unde praesentium

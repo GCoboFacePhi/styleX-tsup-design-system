@@ -3,6 +3,7 @@
   "include": ["./src/**/*"],
   "compilerOptions": {
     "module": "ESNext",
+    "target": "es2022",
     "outDir": "./dist",
     "moduleResolution": "node",
     "skipLibCheck": true,

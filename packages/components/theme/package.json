@@ -15,8 +15,8 @@
     "build:watch": "tsc --watch"
   },
   "devDependencies": {
-    "@stylexjs/esbuild-plugin": "0.8.0",
-    "@stylexjs/stylex": "0.8.0",
+    "@stylexjs/esbuild-plugin": "^0.9.0-beta.1",
+    "@stylexjs/stylex": "^0.9.0-beta.1",
     "@types/react": "18.2.72",
     "@types/react-dom": "18.2.22",
     "@typescript-eslint/eslint-plugin": "7.9.0",
@@ -36,7 +36,7 @@
     "typescript": "5.1.6"
   },
   "peerDependencies": {
-    "@stylexjs/stylex": ">= 0.8.0",
+    "@stylexjs/stylex": "*",
     "react": ">= 18.x"
   }
 }

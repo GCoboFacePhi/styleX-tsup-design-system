@@ -7,7 +7,7 @@ module.exports = {
       // See all options in the babel plugin configuration docs:
       // https://stylexjs.com/docs/api/configuration/babel-plugin/
       {
-        dev: process.env.NODE_ENV === 'development',
+        dev: false,
         genConditionalClasses: true,
         treeshakeCompensation: true,
         aliases: {

@@ -1,5 +1,5 @@
-import { forwardRef, Ref } from "react";
 import * as stylex from "@stylexjs/stylex";
+import { forwardRef, Ref } from "react";
 
 export type FlexContainerProps = {
   children: React.ReactNode;
@@ -104,8 +104,8 @@ const wrapStyles = stylex.create({
 });
 
 const styles = stylex.create({
-  base: { display: "flex" },
-  rowGap: (size: number) => ({ rowGap: `${size}rem` }),
+  base: { display: "flex", backgroundColor: "aqua" },
+  rowGap: (size: number) => ({ rowGap: `${size}px` }),
   columnGap: (size: number) => ({ columnGap: `${size}rem` }),
   flex: (flex: string) => ({ flex }),
 });
